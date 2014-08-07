@@ -3,10 +3,9 @@ ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
+gem 'pg', '0.17.1'
 
 group :development, :test do 
-	# Use sqlite3 as the database for Active Record
-	gem 'sqlite3', '~> 1.3.9'	
 	gem 'rspec-rails', '~> 3.0.2'
 end
 
@@ -37,7 +36,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 group :production do
-  gem 'pg', '0.17.1'
   gem 'rails_12factor', '0.0.2'
 end
 
