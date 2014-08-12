@@ -8,12 +8,17 @@ gem 'pg', '0.17.1'
 group :test do
 	gem 'selenium-webdriver', '~> 2.42.0'
 	gem 'capybara', '~> 2.4.1'
-	gem 'rspec-rails', '~> 3.0.2'
 	gem 'guard-rspec', '~> 4.3.1'
     gem 'spork-rails', '~> 4.0.0'
     gem 'guard-spork', '1.5.1'
     gem 'childprocess', '0.5.3'
 end
+
+group :development, :test do
+	gem 'rspec-rails', '~> 3.0.2'
+end
+
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -39,6 +44,9 @@ gem 'spring',        group: :development
 group :production do
   gem 'rails_12factor', '0.0.2'
 end
+
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
