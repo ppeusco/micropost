@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spork'
+
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
@@ -50,9 +51,11 @@ Spork.prefork do
 end
 
 Spork.each_run do
-  # This code will be run each time you run your specs.
+  ActiveSupport::Dependencies.clear
 
-end
+  load "#{Rails.root}/config/routes.rb"
+  Dir["#{Rails.root}/app/**/*.rb"].each { |f| load f }  
+end if Spork.using_spork?
 
 # --- Instructions ---
 # Sort the contents of this file into a Spork.prefork and a Spork.each_run
