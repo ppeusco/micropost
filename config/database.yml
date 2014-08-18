@@ -7,25 +7,25 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: ppeuscovich
-  password: postgres
+  username: pablo
+  password: pablo
   pool: 5
 
 
 development:
   <<: *default
-  database: micropost-dev
+  database: micropost_dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &test
   <<: *default
-  database: micropost-test
+  database: micropost_test
 
 production:
   <<: *default
-  database: micropost-prod
+  database: micropost_prod
 
 cucumber:
   <<: *test

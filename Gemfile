@@ -13,7 +13,7 @@ group :test do
     gem 'guard-spork', '1.5.1'
     gem 'childprocess', '0.5.3'
     gem 'factory_girl_rails', '~> 4.4.1'
-    gem 'cucumber-rails', '~> 1.4.1'
+    gem 'cucumber-rails', '~> 1.4.1', :require => false
     gem 'database_cleaner', '~> 1.3.0'
 end
 
